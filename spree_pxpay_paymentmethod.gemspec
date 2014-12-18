@@ -5,7 +5,7 @@ require 'spree_pxpay_paymentmethod/version'
 Gem::Specification.new do |s|
   s.name        = 'spree_pxpay_paymentmethod'
   s.version     = SpreePxpayPaymentmethod::VERSION
-  s.authors     = ['tuttinator']
+  s.authors     = ['The Foundry']
   s.email       = ['gems@foundryhq.com']
   s.homepage    = 'https://github.com/localist/spree_pxpay_paymentmethod'
   s.summary     = 'Spree PXPay payment method'
