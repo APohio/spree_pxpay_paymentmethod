@@ -23,6 +23,7 @@ Spree::CheckoutController.class_eval do
       if response[:success] == '1'
         payment.process!
         payment.response_code = response[:auth_code]
+        payment.gateway_payload = response if payment.respond_to?(:gateway_payload)
         payment.save
         payment.complete
 

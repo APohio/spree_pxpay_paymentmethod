@@ -1,5 +1,11 @@
 # Spree PxPay Gateway
 
+Customised branch for Localist. This shouldn't be used by anyone else
+(unless you want to migrate an `hstore` column into `spree_payments`
+called `gateway_payload`).
+
+# Spree PxPay Gateway
+
 This is a gem for Spree 2.1.7 which adds PXPay (paymentexpress.com - a NZ and
 Australian Payment Processor) as a Payment Method.
 
