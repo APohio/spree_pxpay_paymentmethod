@@ -34,6 +34,7 @@ Inspired by the [spree-hosted-gateway gem](https://github.com/joshmcarthur/spree
 
 ## CONTRIBUTORS
 
-@jstirk
-@Michael1969
-@lukes
+* @tuttinator
+* @jstirk
+* @Michael1969
+* @lukes
