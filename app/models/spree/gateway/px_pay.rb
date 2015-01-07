@@ -57,7 +57,7 @@ private
 
     # Calculates the url to return to after the PxPay process completes
     def callback_url(host, protocol, port)
-      url_for(:controller => 'spree/checkout', :action => 'px_pay_callback', :only_path => false, :host => host, :protocol => protocol, :port => port)
+      url_for(:controller => 'px_pay_gateway_callback', :action => 'callback', :only_path => false, :host => host, :protocol => protocol, :port => port)
     end
   end
 end
