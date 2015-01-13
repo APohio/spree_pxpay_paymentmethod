@@ -18,11 +18,16 @@ class PxPayGatewayCallbackController < ActionController::Base
         payment.save
         payment.complete
 
-        order.state = 'complete'
-        order.completed_at  = Time.now
-        order.save
+        unless order.next
+          flash[:error] = order.errors[:base].join("\n")
+          redirect_to checkout_state_path(order.state) and return
+        end
 
-        order.deliver_order_confirmation_email
+        if order.complete?
+          order.reload
+          order.update!
+        end
+
       else
         payment.void
         redirect_to cart_path, :notice => 'Your credit card details were declined. Please check your details and try again.'
@@ -31,8 +36,10 @@ class PxPayGatewayCallbackController < ActionController::Base
 
     end
 
+    session[:order_id] = nil
     flash.notice = Spree.t(:order_processed_successfully)
-    redirect_to order_path(order, :token => order.token)
+    flash[:commerce_tracking] = "nothing special"
+    redirect_to order_path(order)
   end
 
 
