@@ -38,6 +38,7 @@ class PxPayGatewayCallbackController < ActionController::Base
     end
 
     session[:order_id] = nil
+    flash[:commerce_tracking] = true
     flash.notice = Spree.t(:order_processed_successfully)
     redirect_to order_path(order)
   end
