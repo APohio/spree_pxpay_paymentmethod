@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.email       = ['gems@foundryhq.com']
   s.homepage    = 'https://github.com/localist/spree_pxpay_paymentmethod'
   s.summary     = 'Spree PXPay payment method'
-  s.description = 'Gem for Spree 2.1.7 which adds PXPay (paymentexpress.com - a NZ and Australian Payment Processor) as a Payment Method.'
+  s.description = 'Gem for Spree 3.0.4 which adds PXPay (paymentexpress.com - a NZ and Australian Payment Processor) as a Payment Method.'
 
   s.rubyforge_project = 'spree_pxpay_paymentmethod'
 
